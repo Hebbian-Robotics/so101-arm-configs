@@ -1,4 +1,4 @@
-"""Install an arm profile and calibration into a station checkout."""
+"""Install an arm profile and calibration."""
 
 import argparse
 import json
@@ -24,13 +24,16 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("serial", help="USB controller serial number")
     parser.add_argument("--port", required=True, help="Serial port on this machine")
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        required=True,
+        help="Directory for the generated profile",
+    )
     arguments = parser.parse_args()
     if not re.fullmatch(r"[A-Za-z0-9_-]+", arguments.serial):
         parser.error("serial must contain only letters, digits, hyphens or underscores")
     repository = Path(__file__).resolve().parent
-    station_root = repository.parent.parent.parent
-    if not (station_root / "profiles" / "so101-manual.toml").is_file():
-        parser.error("clone this repository into profiles/local/arm-configs")
     arm = repository / "arms" / arguments.serial
     template = (arm / "profile.toml").read_text()
     if template.count('"__LOCAL_PORT__"') != 1:
@@ -56,7 +59,7 @@ def main() -> None:
         calibration_root = hf_home / "lerobot" / "calibration"
     destinations = [
         (
-            station_root / "profiles" / "local" / f"so101-{arguments.serial}.toml",
+            arguments.output_dir.expanduser() / f"so101-{arguments.serial}.toml",
             profile.encode(),
         ),
         (
