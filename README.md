@@ -2,7 +2,13 @@
 
 SO-101 profiles and calibrations, keyed by USB controller serial number.
 
-Clone this repository into `profiles/local/arm-configs` inside the station checkout.
+From the station checkout, clone this repository into the ignored local directory:
+
+```sh
+mkdir -p profiles/local
+git clone https://github.com/Hebbian-Robotics/so101-arm-configs.git profiles/local/arm-configs
+```
+
 Import an arm using its board serial and the local serial port:
 
 ```sh
