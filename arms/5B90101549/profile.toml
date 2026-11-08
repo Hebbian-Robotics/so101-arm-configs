@@ -1,0 +1,11 @@
+extends = "so101-manual"
+name = "so101-5B90101549"
+
+[feetech]
+ports = { follower = "__LOCAL_PORT__" }
+calibration_ids = { follower = "so101_5B90101549" }
+joint_offsets_radians = [0.0, 0.0, 0.0, 0.0, -1.5707963267948966]
+
+[gripper]
+closed_position_radians = -0.6460649408
+open_position_radians = 1.1224879536
