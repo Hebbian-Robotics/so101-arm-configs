@@ -1,17 +1,19 @@
 # SO-101 arm configurations
 
-Profiles and calibrations keyed by USB controller serial number.
+Each `arms/<USB-controller-serial>/` directory contains the SO-101 setup in
+`setup.toml` and its LeRobot-compatible `calibration.json`. Keep this repository
+private and use a separate entry for each arm.
 
-To set up an arm:
+To calibrate, stop the controller, support and disable the arm, then run the
+[SO-101 calibration tool](https://github.com/Hebbian-Robotics/so101/tree/main/setup)
+with `--setup-directory /absolute/path/to/this/checkout`. For a new arm with the
+soft gripper and wrist camera, also pass `--model-variant soft-gripper-camera`.
+Review the model, save, and review and commit the resulting setup and calibration
+files. Push the changes for the team. Existing settings are loaded when recalibrating.
 
-1. Copy `arms/<serial>/profile.toml` to your profiles directory and replace
-   `__LOCAL_PORT__` with the USB serial port on your computer.
-2. Copy `arms/<serial>/calibration.json` to LeRobot's calibration directory,
-   naming it `so101_<serial>.json`. The default directory is
-   `~/.cache/huggingface/lerobot/calibration/robots/so_follower/`.
-3. Select the copied profile when starting your controller. The profile extends
-   `so101-manual` and requires a compatible profile loader.
-
-Use a separate profile and calibration for each arm. Check existing files before
-copying, and support and disable the arm before switching controllers. If a
-controller board is replaced, migrate its configuration to the new serial.
+RUA can select a registered arm automatically using this checkout; see its
+[manual-control guide](https://github.com/Hebbian-Robotics/rua-preview/blob/main/docs/so101-manual-control.md).
+For LeRobot, copy `calibration.json` to
+`~/.cache/huggingface/lerobot/calibration/robots/so_follower/so101_<serial>.json`.
+Check existing files before copying. A replacement controller requires checking
+its association with the physical arm before reusing calibration.
