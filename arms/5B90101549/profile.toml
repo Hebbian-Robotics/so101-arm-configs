@@ -2,10 +2,29 @@ extends = "so101-soft-gripper-camera-manual"
 name = "so101-5B90101549"
 
 [feetech]
-ports = { follower = "__LOCAL_PORT__" }
-calibration_ids = { follower = "so101_5B90101549" }
-joint_offsets_radians = [0.09510680884890975, 0.0, 0.0, 0.0, -1.5707963267948966]
+joint_offsets_radians = [
+    -0.08803345299365929,
+    -0.034906585039886584,
+    -0.10471975511965978,
+    -0.035673575433829416,
+    0.04791300960605702,
+]
+joint_signs = [
+    1,
+    1,
+    1,
+    1,
+    1,
+]
+gripper_sign = 1
+gripper_offset_radians = 0.9450666475805207
+
+[feetech.ports]
+follower = "__LOCAL_PORT__"
+
+[feetech.calibration_ids]
+follower = "so101_5B90101549"
 
 [gripper]
-closed_position_radians = -0.6460649408
-open_position_radians = 1.1224879536
+closed_position_radians = -0.12105000000000002
+open_position_radians = 2.012717275948927
