@@ -1,0 +1,44 @@
+serial = "5B90101549"
+model_variant = "soft-gripper-camera"
+
+[alignment]
+joint_signs = [
+    1,
+    1,
+    1,
+    1,
+    1,
+]
+joint_offsets_radians = [
+    -0.08803345299365929,
+    -0.034906585039886584,
+    -0.10471975511965978,
+    -0.035673575433829416,
+    0.04791300960605702,
+]
+gripper_sign = 1
+gripper_offset_radians = 0.9450666475805207
+
+[gripper]
+closed_position_radians = -0.12105000000000002
+open_position_radians = 2.012717275948927
+
+[servos]
+expected_position_gains = [
+    16,
+    0,
+    32,
+]
+expected_return_delay_time = 0
+
+[servos.expected_position_gains_by_motor]
+2 = [
+    32,
+    0,
+    32,
+]
+3 = [
+    32,
+    0,
+    32,
+]
