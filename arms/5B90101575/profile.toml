@@ -1,4 +1,4 @@
-extends = "so101-manual"
+extends = "so101-soft-gripper-camera-manual"
 name = "so101-5B90101575"
 
 [feetech]
