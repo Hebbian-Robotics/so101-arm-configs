@@ -22,23 +22,3 @@ gripper_offset_radians = 0.9450666475805207
 [gripper]
 closed_position_radians = -0.12105000000000002
 open_position_radians = 2.012717275948927
-
-[servos]
-expected_position_gains = [
-    16,
-    0,
-    32,
-]
-expected_return_delay_time = 0
-
-[servos.expected_position_gains_by_motor]
-2 = [
-    32,
-    0,
-    32,
-]
-3 = [
-    32,
-    0,
-    32,
-]
