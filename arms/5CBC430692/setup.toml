@@ -1,6 +1,5 @@
 serial = "5CBC430692"
 model_variant = "soft-gripper-camera"
-motor_id_order = "ascending"
 
 [alignment]
 joint_signs = [
@@ -23,3 +22,11 @@ gripper_offset_radians = 0.9159210126106935
 [gripper]
 closed_position_radians = -0.1302538847273137
 open_position_radians = 1.9636298907365863
+
+[motor_ids]
+shoulder_pan = 1
+shoulder_lift = 2
+elbow_flex = 3
+wrist_flex = 4
+wrist_roll = 5
+gripper = 6

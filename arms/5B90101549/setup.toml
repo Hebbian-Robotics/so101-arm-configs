@@ -22,3 +22,11 @@ gripper_offset_radians = 0.9450666475805207
 [gripper]
 closed_position_radians = -0.12105000000000002
 open_position_radians = 2.012717275948927
+
+[motor_ids]
+shoulder_pan = 1
+shoulder_lift = 2
+elbow_flex = 3
+wrist_flex = 4
+wrist_roll = 5
+gripper = 6
