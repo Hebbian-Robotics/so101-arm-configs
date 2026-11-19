@@ -17,3 +17,15 @@ For LeRobot, copy `calibration.json` to
 `~/.cache/huggingface/lerobot/calibration/robots/so_follower/so101_<serial>.json`.
 Check existing files before copying. A replacement controller requires checking
 its association with the physical arm before reusing calibration.
+
+## Board labels
+
+| Label | USB controller serial |
+| --- | --- |
+| 1 | [`5B90101575`](arms/5B90101575/) |
+| 2 | [`5B90101549`](arms/5B90101549/) |
+| 3 | [`5B90101464`](arms/5B90101464/) |
+| 4 | [`5CBC430692`](arms/5CBC430692/) |
+
+Board labels can be any unique name. We currently use sequential numbers.
+Calibration directories are keyed by USB serial.
