@@ -29,6 +29,7 @@ its association with the physical arm before reusing calibration.
 | 5 | [`5B7B009457`](arms/5B7B009457/) |
 | 6 | [`5B79081103`](arms/5B79081103/) |
 | 7 | [`5B79080492`](arms/5B79080492/) |
+| 8 | [`5CBC431221`](arms/5CBC431221/) |
 
 Board labels can be any unique name. We currently use sequential numbers.
 Calibration directories are keyed by USB serial.
