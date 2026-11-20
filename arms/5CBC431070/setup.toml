@@ -1,0 +1,32 @@
+serial = "5CBC431070"
+model_variant = "soft-gripper-camera"
+
+[motor_ids]
+shoulder_pan = 1
+shoulder_lift = 2
+elbow_flex = 3
+wrist_flex = 4
+wrist_roll = 5
+gripper = 6
+
+[alignment]
+joint_signs = [
+    1,
+    1,
+    1,
+    1,
+    1,
+]
+joint_offsets_radians = [
+    0.10981457830353746,
+    -0.0247782894208308,
+    -0.11701478982574787,
+    -0.016655627910391792,
+    0.07702157752243655,
+]
+gripper_sign = 1
+gripper_offset_radians = 0.9358627628532067
+
+[gripper]
+closed_position_radians = -0.13792378866674204
+open_position_radians = 2.0096493143731555
