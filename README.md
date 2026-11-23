@@ -18,6 +18,19 @@ For LeRobot, copy `calibration.json` to
 Check existing files before copying. A replacement controller requires checking
 its association with the physical arm before reusing calibration.
 
+## Wrist cameras
+
+`camera-defaults.toml` gives registered soft-gripper arms a shared wrist-camera
+selector. RUA matches the USB vendor, product and serial to a connected capture
+device. An arm with a replacement camera can override the selector in
+`arms/<USB-controller-serial>/cameras.toml`. Both selectors use
+`VID:PID:USB_SERIAL`, with hexadecimal VID and PID.
+
+Set `wrist = "none"` in an arm’s camera file to opt out of the shared default.
+At the station, `--camera wrist=DEVICE` selects an explicit device.
+See the [RUA camera guide](https://github.com/Hebbian-Robotics/rua/blob/main/docs/cameras.md)
+for camera discovery and troubleshooting.
+
 ## Board labels
 
 | Label | USB controller serial |
