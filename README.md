@@ -50,6 +50,7 @@ for camera discovery and troubleshooting.
 | 13 | [`5CBC453054`](arms/5CBC453054/) |
 | 14 | [`5CBC432354`](arms/5CBC432354/) |
 | 15 | [`5CBC453097`](arms/5CBC453097/) |
+| 16 | [`5CBC430694`](arms/5CBC430694/) |
 
 Board labels can be any unique name. We currently use sequential numbers.
 Calibration directories are keyed by USB serial.
