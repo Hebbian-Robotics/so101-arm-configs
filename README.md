@@ -54,6 +54,7 @@ for camera discovery and troubleshooting.
 | 17 | [`5B7B015191`](arms/5B7B015191/) |
 | 18 | [`5B7B009587`](arms/5B7B009587/) |
 | 19 | [`5B7B009458`](arms/5B7B009458/) |
+| 20 | [`5B7B009780`](arms/5B7B009780/) |
 
 Board labels can be any unique name. We currently use sequential numbers.
 Calibration directories are keyed by USB serial.
